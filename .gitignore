@@ -1,0 +1,11 @@
+# .gitignore
+terraform/.terraform/
+#terraform/terraform.tfstate*
+#terraform/main.tf
+#ansible/hosts
+#ansible/playbook.yml
+venv
+__pycache__/
+*.pyc
+.env
+

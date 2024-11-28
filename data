@@ -1,0 +1,9 @@
+{
+    "postgresVersion": "14",
+    "instanceType": "t2.micro",
+    "numReplicas": 2,
+    "settings": {
+        "maxConnections": 100,
+        "sharedBuffers": "128MB"
+    }
+}

@@ -1,0 +1,24 @@
+
+    - name: Configure PostgreSQL
+      hosts: all
+      become: yes
+      tasks:
+        - name: Install PostgreSQL
+          apt:
+            name: postgresql-14
+            state: present
+
+        - name: Set max_connections
+          lineinfile:
+            path: /etc/postgresql/14/main/postgresql.conf
+            regexp: '^max_connections'
+            line: "max_connections = 100"
+            state: present
+
+        - name: Set shared_buffers
+          lineinfile:
+            path: /etc/postgresql/14/main/postgresql.conf
+            regexp: '^shared_buffers'
+            line: "shared_buffers = 128MB"
+            state: present
+    
